@@ -65,6 +65,7 @@ async function getDataById(id) {
       return {
         "Tez No": thesisNo,
         "Tez ID": id,
+        "Detay Sayfası Linki": `https://tez.yok.gov.tr/UlusalTezMerkezi/tezDetay.jsp?id=${id}`,
         "Tez Adı (Orijinal)": thesisTitleOriginal,
         "Tez Adı (Çeviri)": thesisTitleTranslation,
         Yazar: author,
@@ -97,22 +98,26 @@ function exportToExcel(data) {
   };
 }
 
-function main() {
+async function main() {
   const result = [];
   const ids = getThesesIDs();
-  let counter = 0;
 
-  ids.forEach(async (x) => {
+  console.log("Tezlerin detayları sorgulanıyor, lütfen bekleyiniz.");
+
+  for (const id of ids) {
     try {
-      const thesisData = await getDataById(x);
+      const thesisData = await getDataById(id);
       result.push(thesisData);
     } 
     catch (err) {
       console.error(err);
     }
+  }
 
-    if (++counter >= ids.length) exportToExcel(result);
-  });
+  console.log("Tamamlandı.");
+
+  exportToExcel(result);
+
 }
 
 main();

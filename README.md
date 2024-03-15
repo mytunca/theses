@@ -18,7 +18,7 @@ Bu repo, araştırmacılar ve veri bilimcileri için YÖK Ulusal Tez Merkezi'nde
 1. [YÖK Ulusal Tez Merkezi](https://tez.yok.gov.tr/UlusalTezMerkezi/)'nde istediğiniz aramayı yapın.
 2. Sonuçların listelendiği https://tez.yok.gov.tr/UlusalTezMerkezi/tezSorguSonucYeni.jsp sayfası açıldığında F12 tuşuna basarak tarayıcınızın geliştirici araçlarını açın ve **Console** sekmesine geçin.
 3. **index.js** dosyasında bulunan kodu kopyalayın. Konsola kodu yapıştırıp **Enter** tuşuna basın.
-5. Sorgulama sonucunda dönen tüm tezlerin detaylı verileri Excel dosyası olarak inecektir.
+5. Sorgulama sonucunda dönen tüm tezlerin detaylı verileri Excel dosyası olarak inecektir. (İşlem birkaç dakika sürebilir.)
 
 **Notlar:** 
 1. Bu kodun kullanımı, YÖK Ulusal Tez Merkezi'nin kullanım koşullarına uygun olmalıdır. Veri toplama ve kullanma konusunda YÖK'ün politikalarını göz önünde bulundurun.
