@@ -36,12 +36,18 @@ async function getDataById(id) {
         .split(" /");
       const author = firstTable[2].match(/(?<=Yazar:).+/)[0].trim();
       const supervisor = firstTable[4].match(/(?<=Danışman:).+/)[0].trim();
-      const where = firstTable[6].match(/(?<=Yer Bilgisi:).+/)[0].trim();
-      const subject = firstTable[8].match(/(?<=Konu:).+/)[0].trim();
+      const where =
+        (/(?<=Yer Bilgisi:).+/.test(firstTable[6]) &&
+          firstTable[6].match(/(?<=Yer Bilgisi:).+/)[0].trim()) ||
+        "";
+      const subject =
+        (/(?<=Konu:).+/.test(firstTable[8]) &&
+          firstTable[8].match(/(?<=Konu:).+/)[0].trim()) ||
+        "";
       const keyword =
         (/(?<=Dizin:).+/.test(firstTable[10]) &&
           firstTable[10].match(/(?<=Dizin:).+/)[0].trim()) ||
-        null;
+        "";
 
       const secondTable = [
         ...doc.querySelector(
@@ -80,8 +86,8 @@ async function getDataById(id) {
         "Özet (Türkçe)": abstractTurkish,
         "Özet (İngilizce)": abstractEnglish,
       };
-    })
-    .catch((err) => console.error(id, err));
+    });
+  //.catch((err)=>console.error(id, err));
 }
 
 function exportToExcel(data) {
@@ -98,26 +104,34 @@ function exportToExcel(data) {
   };
 }
 
+async function getBatchData(ids) {
+  const result = [];
+  const promises = ids.map((id) => getDataById(id));
+
+  return Promise.all(promises);
+}
+
 async function main() {
   const result = [];
   const ids = getThesesIDs();
+  let total = 0;
 
   console.log("Tezlerin detayları sorgulanıyor, lütfen bekleyiniz.");
 
-  for (const id of ids) {
-    try {
-      const thesisData = await getDataById(id);
-      result.push(thesisData);
-    } 
-    catch (err) {
-      console.error(err);
-    }
+  for (let i = 0; i < ids.length; i += 500) {
+    const batchData = await getBatchData(ids.slice(i, i + 500));
+    total += batchData.length;
+    console.log(
+      `Şu ana kadar toplam ${total} tezin verisi sorgulandı. İşlem devam ediyor.`
+    );
+
+    result.push(...batchData);
   }
 
   console.log("Tamamlandı.");
+  console.log(result);
 
   exportToExcel(result);
-
 }
 
 main();

@@ -25,7 +25,7 @@ Bu repo, araştırmacılar ve veri bilimcileri için YÖK Ulusal Tez Merkezi'nde
 2. YÖK Ulusal Tez Merkezi'nde yapılan aramalar, tek seferde en fazla 2000 tezin verisini listelemektedir. 
     >Tarama sonucunda 13472 kayıt bulundu. 2000 tanesi görüntülenmektedir. 
     
-    şeklinde bir uyarıyla karşılaşmanız halinde arama kriterlerinizi arttırarak listelenen tez sayısını 2000'in altına düşürmeye çalışın. 
+    şeklinde bir uyarıyla karşılaşmanız halinde arama kriterlerinizi genişleterek listelenen tez sayısını 2000'in altına düşürmeye çalışın. 
     
     Örneğin arama yaptığınız kriterleri sağlayan toplam 5000 civarı tez varsa onar yıllık periyotlar halinde sorgulama yaparsanız tek seferde listelenen tez sayısı muhtemelen 2000'in altına düşecektir.
 
