@@ -129,8 +129,6 @@ async function main() {
   }
 
   console.log("Tamamlandı.");
-  console.log(result);
-
   exportToExcel(result);
 }
 
