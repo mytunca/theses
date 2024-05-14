@@ -24,6 +24,7 @@ Bu repo, araştırmacılar ve veri bilimcileri için YÖK Ulusal Tez Merkezi'nde
     document.head.appendChild(script);
     ```
     > **Not**
+    >
     >Konsola daha önce kod yapıştırmadıysanız yapıştırma engeliyle **(paste protection)** karşılaşmanız olasıdır. Bu engeli kaldırmak için tarayıcınız bir öneride bulunacaktır. Örneğin Google Chrome için **allow pasting** komutunu kullanmanız gerekecektir. Engeli kaldırdıktan sonra kodu tekrar yapıştırın.
 
 5. Sorgulama sonucunda dönen tüm tezlerin detaylı verileri Excel dosyası olarak inecektir. (İşlem birkaç dakika sürebilir.)
