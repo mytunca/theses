@@ -3,7 +3,7 @@ class ThesisScraper {
     this.ids = getData().rows.map(
       (x) => x.userId.match(/(?<=tezDetay\(')([^']*)/)[1]
     );
-    this.total = 0;
+
     this.results = [];
   }
 
@@ -54,14 +54,20 @@ class ThesisScraper {
         const year = Number(secondTable[6].trim());
         const numPages = Number(secondTable[8].trim().match(/\d+/)[0]);
 
+        /* Bazı tezlerin özetlerinde garip bir şekilde FFFE karakteri geçiyor ve bu Excel dosyasının açılmasına engel oluyor.
+        Bundan dolayı replace() metodu ile bunları temizliyoruz. */
+
         const abstractTurkish = doc
           .querySelector("#td0")
           .innerText.trim()
-          .slice(0, 5000);
+          .slice(0, 5000)
+          .replace(/\uFFFE/g, " ");
+
         const abstractEnglish = doc
           .querySelector("#td1")
           .innerText.trim()
-          .slice(0, 5000);
+          .slice(0, 5000)
+          .replace(/\uFFFE/g, " ");
 
         return {
           "Tez No": thesisNo,
@@ -109,12 +115,12 @@ class ThesisScraper {
 
     for (let i = 0; i < this.ids.length; i += 500) {
       const batchData = await this.getBatchData(this.ids.slice(i, i + 500));
-      this.total += batchData.length;
-      console.log(
-        `Şu ana kadar toplam ${this.total} tezin verisi sorgulandı. İşlem devam ediyor.`
-      );
 
       this.results.push(...batchData);
+
+      console.log(
+        `Şu ana kadar toplam ${this.results.length} tezin verisi sorgulandı. İşlem devam ediyor.`
+      );
     }
 
     console.log("Tamamlandı.");
