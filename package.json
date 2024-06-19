@@ -1,0 +1,35 @@
+{
+  "name": "theses",
+  "version": "2.0.0",
+  "description": "YÖK Tez Merkezi'nden tezlerin metaverilerini ve metin dosyalarını indirmenize olanak tanıyan bir repository",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mytunca/theses.git"
+  },
+  "keywords": [
+    "webscraping"
+  ],
+  "author": "Muhammet Yunus Tunca",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mytunca/theses/issues"
+  },
+  "homepage": "https://github.com/mytunca/theses#readme",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "file-saver": "^2.0.5",
+    "jszip": "^3.10.1",
+    "preact": "^10.20.0",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.8.2",
+    "vite": "^5.2.2"
+  }
+}
