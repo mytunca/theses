@@ -8,7 +8,7 @@ Bu araç, araştırmacılar ve veri bilimciler için YÖK  Tez Merkezi'nden veri
 
 ### Özellikler
 
-✅ Ücretsizdir. 
+✅ Ücretsizdir.  
 ✅ Üyelik gerektirmez.  
 ✅ Tezlerin tüm metaverilerini ve metin dosyalarını indirmenize olanak tanır.  
 ✅ JavaScript dilini kullanarak tarayıcıda çalışır, ayrı bir yazılım yüklemenizi gerektirmez.
