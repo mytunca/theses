@@ -25,7 +25,7 @@ Bu araç, araştırmacılar ve veri bilimciler için YÖK  Tez Merkezi'nden veri
     )
     ```
     **Enter** tuşuna bastığınızda sayfaya **Veri İndir** menüsü eklenecektir.
-    ![Adres çubuğu ekran görüntüsü](src/assets/images/ss1.png)
+    ![Adres çubuğu ekran kaydı](src/assets/images/screencast1.gif)
 
 	 <details>
 	  <summary>Alternatif yöntem</summary>
@@ -40,10 +40,10 @@ Bu araç, araştırmacılar ve veri bilimciler için YÖK  Tez Merkezi'nden veri
 	</details>
 
 3.  Menüye tıklandığında açılan diyalog penceresinden o anda listelenmekte olan tezlerin metaverilerini ve metin dosyalarını indirebilirsiniz. (Metin dosyalarını indirme işlemi bir saat civarı sürebilir.)
-![Adres çubuğu ekran görüntüsü](src/assets/images/screencast1.gif)
+![UI kullanımı ekran kaydı](src/assets/images/screencast2.gif)
 
 ### Chrome Uzantısı Olarak Kullanım
-1. [chrome-extension.rar](/chrome-extension.rar) dosyasını bilgisayarınıza indirip çıkarın.
+1. [chrome-extension.rar](/chrome-extension.rar) dosyasını bilgisayarınıza [indirip](https://cdn.jsdelivr.net/gh/mytunca/theses@2.0.1/chrome-extension.rar) sıkıştırılmış dosyadan çıkarın.
 2. Google Chrome Uzantıları'nı açmak için Google Chrome tarayıcınızda [chrome://extensions/](chrome://extensions/) adresine gidin.
 3. Sayfanın sağ üst kısmından **Geliştirici modu**nu aktif hale getirin.
 4. **Paketlenmemiş öğe yükle** seçeneğini tıklayarak çıkardığınız klasörü seçin.
