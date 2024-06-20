@@ -8,7 +8,8 @@ Bu araç, araştırmacılar ve veri bilimciler için YÖK  Tez Merkezi'nden veri
 
 ### Özellikler
 
-✅ Ücretsizdir. Üyelik gerektirmez.  
+✅ Ücretsizdir. 
+✅ Üyelik gerektirmez.  
 ✅ Tezlerin tüm metaverilerini ve metin dosyalarını indirmenize olanak tanır.  
 ✅ JavaScript dilini kullanarak tarayıcıda çalışır, ayrı bir yazılım yüklemenizi gerektirmez.
 
@@ -43,7 +44,7 @@ Bu araç, araştırmacılar ve veri bilimciler için YÖK  Tez Merkezi'nden veri
 ![UI kullanımı ekran kaydı](src/assets/images/screencast2.gif)
 
 ### Chrome Uzantısı Olarak Kullanım
-1. [chrome-extension.rar](/chrome-extension.rar) dosyasını bilgisayarınıza [indirip](https://cdn.jsdelivr.net/gh/mytunca/theses@2.0.1/chrome-extension.rar) sıkıştırılmış dosyadan çıkarın.
+1. [chrome-extension.rar](/chrome-extension.rar) dosyasını bilgisayarınıza [indirip](https://cdn.jsdelivr.net/gh/mytunca/theses@latest/chrome-extension.rar) sıkıştırılmış dosyadan çıkarın.
 2. Google Chrome Uzantıları'nı açmak için Google Chrome tarayıcınızda [chrome://extensions/](chrome://extensions/) adresine gidin.
 3. Sayfanın sağ üst kısmından **Geliştirici modu**nu aktif hale getirin.
 4. **Paketlenmemiş öğe yükle** seçeneğini tıklayarak çıkardığınız klasörü seçin.
