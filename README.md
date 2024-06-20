@@ -1,20 +1,21 @@
-## YÖK Ulusal Tez Merkezi Veri Kazıma Aracı
+## YÖK Tez Merkezi Veri Kazıma Aracı
 
-Bu "repository", Yükseköğretim Kurulu (YÖK) Tez Merkezi'nde bulunan tezlerin detaylı verilerini indirmek için geliştirilen bir JavaScript kodunu içerir.
+Bu araç, Yükseköğretim Kurulu (YÖK) Tez Merkezi'nden veri indirmek için geliştirilmiştir.
 
-YÖK Tez Merkezi'nde, tezlerin metaverileri (tez no, yazar, yıl, tez adı, üniversite, dil, tez türü ve konu) bir tablo halinde listelenir. Ancak, daha ayrıntılı bilgilere erişmek için her bir tezin detay sayfasına tek tek tıklamak gereklidir. Bu süreci otomatikleştirmek için geliştirilen bu JavaScript kodu, tablodaki tüm tezlerin detaylı verilerine erişim sağlar.
+YÖK Tez Merkezi'nde sorgu yapıldığında, tezlerin metaverileri (tez no, yazar, yıl, tez adı, üniversite, dil, tez türü ve konu) bir tablo halinde listelenir. Ancak, daha ayrıntılı bilgilere erişmek için her bir tezin detay sayfasına tek tek tıklamak gereklidir. Bu araç sizin yerinize bu işlemi hızlı bir şekilde tamamlayarak veriyi indirilebilecek şekilde size sunar.
 
-Bu repo, araştırmacılar ve veri bilimciler için YÖK Ulusal Tez Merkezi'nden veri toplamayı ve analiz etmeyi kolaylaştırmayı amaçlamaktadır.
+Bu araç, araştırmacılar ve veri bilimciler için YÖK  Tez Merkezi'nden veri toplamayı ve analiz etmeyi kolaylaştırmayı amaçlamaktadır.
 
 ### Özellikler
 
+✅ Ücretsizdir. Üyelik gerektirmez. 
 ✅ Tezlerin tüm metaverilerini ve metin dosyalarını indirmenize olanak tanır.  
 ✅ JavaScript dilini kullanarak tarayıcıda çalışır, ayrı bir yazılım yüklemenizi gerektirmez.
 
 ### Kullanım
 
 1.  [YÖK Tez Merkezi](https://tez.yok.gov.tr/UlusalTezMerkezi/)'nde istediğiniz aramayı yapın.
-2.  Sonuçların listelendiği https://tez.yok.gov.tr/UlusalTezMerkezi/tezSorguSonucYeni.jsp sayfası açıldığında tarayıcının adres çubuğundaki mevcut adresi silip elle `javascript:` yazın ve arkasına aşağıdaki kodu yapıştırın.
+2.  Sonuçların listelendiği https://tez.yok.gov.tr/UlusalTezMerkezi/tezSorguSonucYeni.jsp sayfası açıldığında tarayıcının adres çubuğundaki mevcut adresi silip yerine elle `javascript:` yazın ve arkasına aşağıdaki kodu yapıştırın.
     ```js
     document.head.appendChild(
         Object.assign(
@@ -42,18 +43,18 @@ Bu repo, araştırmacılar ve veri bilimciler için YÖK Ulusal Tez Merkezi'nden
 ![Adres çubuğu ekran görüntüsü](src/assets/images/screencast1.gif)
 
 ### Chrome Uzantısı Olarak Kullanım
-1. [chrome-extension](/chrome-extension/) klasörünü bilgisayarınıza indirin.
-2. Google Chrome Uzantıları'nı açmak için [chrome://extensions/](chrome://extensions/) adresine gidin.
+1. [chrome-extension.rar](/chrome-extension.rar) dosyasını bilgisayarınıza indirip çıkarın.
+2. Google Chrome Uzantıları'nı açmak için Google Chrome tarayıcınızda [chrome://extensions/](chrome://extensions/) adresine gidin.
 3. Sayfanın sağ üst kısmından **Geliştirici modu**nu aktif hale getirin.
-4. **Paketlenmemiş öğe yükle** seçeneğini tıklayarak indirdiğiniz klasörü seçin.
+4. **Paketlenmemiş öğe yükle** seçeneğini tıklayarak çıkardığınız klasörü seçin.
 5. Uzantı yüklendikten sonra Tez Merkezi Sorgu Sonuç Sayfası'nda uzantıyı tıklayın.
 6. Uzantının tez.yok.gov.tr üzerinde her zaman değişiklik yapmasına izin verin. 
 
 
 ### Notlar
 
-1. Bu kodun kullanımı, YÖK Ulusal Tez Merkezi'nin kullanım koşullarına uygun olmalıdır. Veri toplama ve kullanma konusunda YÖK'ün politikalarını göz önünde bulundurun.
-2. YÖK Ulusal Tez Merkezi'nde yapılan aramalar, tek seferde en fazla 2000 tezin verisini listelemektedir.
+1. Bu kodun kullanımı, YÖK Tez Merkezi'nin kullanım koşullarına uygun olmalıdır. Veri toplama ve kullanma konusunda YÖK'ün politikalarını göz önünde bulundurun.
+2. YÖK Tez Merkezi'nde yapılan aramalar, tek seferde en fazla 2000 tezin verisini listelemektedir.
 
    > Tarama sonucunda 13472 kayıt bulundu. 2000 tanesi görüntülenmektedir.
 
